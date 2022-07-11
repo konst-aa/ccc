@@ -1,4 +1,6 @@
 -- Translation of my python stub
+import Data.List (tails)
+import Data.Foldable (for_)
 
 inp :: IO Int
 inp = readLn
@@ -14,23 +16,10 @@ insr = do
     input <- getLine
     return input
 
--- solving: https://codeforces.com/contest/1698/problem/B
+chunk :: List -> Integer -> [List]
+chunk l n =
+    filter (\x -> length x == n) [item | item <- tails $ l]
+
+-- solving:
 main :: IO()
 main = do
-    num_tests <- inp
-    [test | _ <- [1..num_tests]]
-
--- half-digested code that ill finish later
-
-test :: IO()
-test = do
-    input <- inlt
-    sizes <- inlt
-    let 
-        num_piles = first input
-        operations = last input
-    in
-        if operations == 0
-            then print ((num_piles - 1) `div` 2)
-        else
-
