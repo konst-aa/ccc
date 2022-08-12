@@ -1,5 +1,5 @@
--- Translation of my python stub
-import Data.List
+-- Translation of my python stub, also broken
+{- import Data.List ( tails )
 import Data.Foldable (for_)
 
 inp :: IO Int
@@ -13,8 +13,7 @@ inl = do
 
 insr :: IO String
 insr = do
-    input <- getLine
-    return input
+    getLine
 
 chunk :: [a] -> Int -> [b]
 chunk l n = do
@@ -27,7 +26,7 @@ main = do
     for_ [1..num_tests] (\_ -> do
         input <- inl
         sizes <- inl
-        let num_piles = input!!0
+        let num_piles = head input
         let operations = input!!1
 
         if operations == 0 then 
@@ -38,4 +37,4 @@ main = do
                 if l!!1 > l!!0 + l!!2 then 1
                 else 0) 
             c <- sum b
-            print c)
+            print c)-}

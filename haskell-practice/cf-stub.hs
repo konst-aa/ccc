@@ -12,14 +12,12 @@ inl = do
     return $ map read nums
 
 insr :: IO String
-insr = do
-    input <- getLine
-    return input
+insr = do getLine
 
-chunk :: List -> Integer -> [List]
-chunk l n =
-    filter (\x -> length x == n) [item | item <- tails $ l]
-
+chunk :: [t] -> Int -> Int -> Bool -> [[t]]
+chunk l size step leftover =
+    [take size item | item <- tails l,  (not (null item) && leftover) || length item >= size]
+    
 -- solving:
 main :: IO()
-main = do
+main = do print (chunk [1,2,3,4,5] 3 1 True)
