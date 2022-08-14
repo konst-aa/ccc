@@ -1,13 +1,13 @@
-import qualified Data.Set as Set
+import qualified Data.Map.Strict as Map
 
-folder :: (Set.Set Char, Int) -> Char -> (Set.Set Char, Int)
-folder (seen, best) char
-    | Set.member char seen = (Set.delete char seen, best)
-    | Set.size seen + 1 > best = (Set.insert char seen, best + 1)
-    | otherwise = (Set.insert char seen, best) 
+folder :: (Map.Map Char Int, Int, Int, Int) -> Char -> (Map.Map Char Int, Int, Int, Int)
+folder (positions, past, best, index) char = do
+    let newPast = max (Map.findWithDefault 0 char positions) past
+    let newBest = max (index + 1 - newPast) best
+    (Map.insert char (index + 1) positions, newPast, newBest, index + 1)
 
 -- solving: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 main :: IO()
-main = do 
-    let (_, best) = Prelude.foldl folder (Set.empty, 0) "abacde"
+main = do
+    let (_, _, best, _) = Prelude.foldl folder (Map.empty, 0, 0, 0) "aab"
     print best
