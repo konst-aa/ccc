@@ -1,0 +1,1 @@
+/Users/konstantinaa/code/ccc/./codeforces/1698-rising-sand.hs
