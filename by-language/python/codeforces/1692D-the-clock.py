@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./codeforces/1692D-the-clock.py
+../../.././codeforces/1692D-the-clock.py

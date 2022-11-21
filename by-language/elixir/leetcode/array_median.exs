@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./leetcode/array_median.exs
+../../.././leetcode/array_median.exs

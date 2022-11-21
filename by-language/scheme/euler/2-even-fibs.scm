@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./euler/2-even-fibs.scm
+../../.././euler/2-even-fibs.scm

@@ -9,8 +9,9 @@ def directions(fr, to):
         while path[i] != to:
             dr += [path[i]]
             i += 1
-        dirs += [dr+[to]]
+        dirs += [dr + [to]]
     return dirs
+
 
 def evacuate(n, k, order, duration, sfx):
     hist = []
@@ -34,7 +35,7 @@ def evacuate(n, k, order, duration, sfx):
             b = False
             past = time
             for i in range(start_index, len(hist)):
-                #print("wha?")
+                # print("wha?")
                 if not b and ports[hist[i]] == path[0]:
                     path.pop(0)
                 if not path:
@@ -45,18 +46,19 @@ def evacuate(n, k, order, duration, sfx):
         civilians += [-1 if res == [-1, -1] else min(filter(lambda i: i != -1, res))]
     return civilians
 
-#print(evacuate(1000, 1000, ["A"] * 1000 + ["D"], [1] * 1000000001, [["A", "D", 0]] * 1000))
-tests = int(input().strip()) # Number of test cases
+
+# print(evacuate(1000, 1000, ["A"] * 1000 + ["D"], [1] * 1000000001, [["A", "D", 0]] * 1000))
+tests = int(input().strip())  # Number of test cases
 for test in range(tests):
-    line = input().strip().split(' ')
+    line = input().strip().split(" ")
     n = int(line[0])
     k = int(line[1])
-    order = input().strip().split(' ') # List of which portals turn on in order
-    duration = input().strip().split(' ') # List of times when portals are on for
+    order = input().strip().split(" ")  # List of which portals turn on in order
+    duration = input().strip().split(" ")  # List of times when portals are on for
     duration = [int(x) for x in duration]
-    sfx = [] # List of triplets (start_portal, destination_portal, arrival_time)
+    sfx = []  # List of triplets (start_portal, destination_portal, arrival_time)
     for _ in range(k):
-        sfx.append(input().strip().split(' '))
+        sfx.append(input().strip().split(" "))
     ret_arr = evacuate(n, k, order, duration, sfx)
     ret_arr = [str(x) for x in ret_arr]
-    print('\n'.join(ret_arr))
+    print("\n".join(ret_arr))

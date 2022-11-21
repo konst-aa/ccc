@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./euler/prob-15.py
+../../.././euler/prob-15.py

@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./codeforces/1698B-rising-sand.py
+../../.././codeforces/1698B-rising-sand.py

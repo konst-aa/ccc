@@ -20,24 +20,28 @@ from docopt import docopt
 import os
 
 LANGS = {
-    ".py":"python",
-    ".hs":"haskell",
-    ".exs":"elixir",
-    ".scm":"scheme",
-    ".rkt":"scheme"
+    ".py": "python",
+    ".hs": "haskell",
+    ".exs": "elixir",
+    ".scm": "scheme",
+    ".rkt": "scheme",
 }
+
 
 def getextension(file):
     parts = os.path.splitext(file)
     return parts[-1]
 
-if __name__ == '__main__':
-    arguments = docopt(__doc__, version='invert v1')
+
+if __name__ == "__main__":
+    arguments = docopt(__doc__, version="invert v1")
     out = arguments["<out>"]
     abs_here = os.path.abspath(".")
 
     hidden_check = lambda path: not path.startswith(".")
-    ignore_check = lambda path: path not in arguments["--ignore"] + ["invert.py"] + [out]
+    ignore_check = lambda path: path not in arguments["--ignore"] + ["invert.py"] + [
+        out
+    ]
 
     langs = {}
     for root, dirs, files in os.walk("."):
@@ -56,7 +60,10 @@ if __name__ == '__main__':
             for file in files:
                 target_dir = f"{abs_here}/{out}/{lang}/{subdir}"
                 os.makedirs(target_dir, exist_ok=True)
+                rel_path = len(f"{out}/{subdir}".split("/")) * "../"
                 try:
-                    os.symlink(f"{abs_here}/{subdir}/{file}", f"{target_dir}/{file}")
+                    os.symlink(
+                        f"{rel_path[:-1]}/{subdir}/{file}", f"{target_dir}/{file}"
+                    )
                 except FileExistsError:
                     pass

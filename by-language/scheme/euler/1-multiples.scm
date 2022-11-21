@@ -1,1 +1,1 @@
-/Users/konstantinaa/code/ccc/./euler/1-multiples.scm
+../../.././euler/1-multiples.scm
