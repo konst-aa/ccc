@@ -1,0 +1,1 @@
+../../../../../.././by-language/python/codeforces/cf-stub.py

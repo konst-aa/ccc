@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell --pure -i python -p python3 pythonPackages.docopt
+#! nix-shell --pure -i python -p python3 python3Packages.docopt
 
 
 __doc__ = """invert, call in the directory you wish to invert.
@@ -25,6 +25,7 @@ LANGS = {
     ".exs": "elixir",
     ".scm": "scheme",
     ".rkt": "scheme",
+    ".sh": "bash",
 }
 
 
