@@ -1,1 +1,0 @@
-../../../../../.././by-language/scheme/euler/2-even-fibs.scm

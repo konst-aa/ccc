@@ -1,1 +1,1 @@
-../../../.././codeforces/1698-rising-sand-BROKEN.hs
+../../.././codeforces/1698-rising-sand-BROKEN.hs

@@ -1,1 +1,1 @@
-../../../.././codeforces/274B-zero-tree.py
+../../.././codeforces/274B-zero-tree.py

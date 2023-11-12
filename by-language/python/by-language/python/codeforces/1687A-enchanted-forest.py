@@ -1,1 +1,0 @@
-../../../../../.././by-language/python/codeforces/1687A-enchanted-forest.py

@@ -1,0 +1,1 @@
+../../.././codeforces/29A-spit-problem.py

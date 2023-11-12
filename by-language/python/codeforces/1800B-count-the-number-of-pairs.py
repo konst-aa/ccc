@@ -1,0 +1,1 @@
+../../.././codeforces/1800B-count-the-number-of-pairs.py

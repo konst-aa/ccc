@@ -1,1 +1,0 @@
-../../../../../../.././by-language/python/pclassics/2022-11-19/problem-8.py

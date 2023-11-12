@@ -1,1 +1,0 @@
-../../../../../.././by-language/python/codeforces/1759-yesyes.py

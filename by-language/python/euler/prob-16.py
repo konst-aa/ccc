@@ -1,4 +1,1 @@
-def sol(n):
-    return sum(map(int, str(2**n)))
-
-print(sol(1000))
+../../.././euler/prob-16.py

@@ -1,1 +1,0 @@
-../../../../../.././by-language/python/euler/prob-14.py
